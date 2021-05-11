@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "entryPagePath": "pages/index/index",
+  "window": {
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTitleText": "网抑云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

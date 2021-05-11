@@ -1,0 +1,14 @@
+<!-- 推荐歌曲 -->
+<view class="recommendContainer">
+    <view class="header">
+      <text class="title">
+        {{headerObj.title}}
+      </text>
+      <view>
+        <text>{{headerObj.text}}</text>
+        <text class="more">{{headerObj.button}}</text>
+      </view>
+    </view>
+  </view>
+
+
