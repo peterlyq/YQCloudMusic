@@ -1,0 +1,52 @@
+/* pages/search/search.wxss */
+.searchContainer{
+  height: 100%;
+  padding: 0 20rpx;
+}
+.header{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerInput{
+  border-radius: 30rpx;
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+}
+.headerInput input{
+  flex: 1;
+}
+.placeholder{
+  font-size: 28rpx;
+}
+.cancel{
+  font-size: 30rpx;
+  width: 100rpx;
+  text-align: center;
+}
+
+
+/* 热搜榜 */
+.title{
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.hotList{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hotList .hotItem{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+}
+.hotItem .order{
+  margin: 0 10rpx;
+}

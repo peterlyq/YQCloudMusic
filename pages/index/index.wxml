@@ -8,7 +8,7 @@
 
   <!-- 导航区域 -->
   <view class="navContainer">
-    <view class="navItem">
+    <view class="navItem" bindtap="routerToRecommend">
       <text class="iconfont icon-tuijian"></text>
       <text>每日推荐</text>
     </view>
@@ -47,12 +47,12 @@
     <navHeader headerObj="{{topObj}}"></navHeader>
     <view >
       <swiper class="topListSwiper" next-margin="50rpx" circular>
-      <swiper-item wx:for="{{topList}}" wx:key="{{name}}">
+      <swiper-item wx:for="{{topList}}" wx:key="name">
        <view class="swiperItem">
         <view class="title">
           {{item.name}}
         </view>
-        <view class="musicItem" wx:for="{{item.tracks}}" wx:for-item="musicItem" wx:key="{{id}}">
+        <view class="musicItem" wx:for="{{item.tracks}}" wx:for-item="musicItem" wx:key="id">
           <image src="{{musicItem.al.picUrl}}" alt=""/>
           <view class="count">{{index + 1}}</view>
           <view class="name">

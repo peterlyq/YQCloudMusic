@@ -1,0 +1,5 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "热门视频",
+  "enablePullDownRefresh": true
+}

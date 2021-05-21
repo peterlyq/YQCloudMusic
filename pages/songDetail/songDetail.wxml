@@ -1,0 +1,28 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="songContainer">
+  <view class="author">{{song.ar[0].name}}</view>
+  <view class="circle"></view>
+  <image class="neddle {{isPlay && 'neddleClass'}}" src="/static/images/song/needle.png"></image>
+  <view class="discContainer">
+    <image class="disc " src="/static/images/song/disc.png"></image>
+    <image class="musicImg {{isPlay && 'imageAnimation'}}" src="{{song.al.picUrl}}"></image>
+  </view>
+  <!-- 进度条控制区域 -->
+  <view class="control">
+    <text>{{currentTime+''}}</text>
+    <view class="controlBar">
+      <view class="audio-current-time" style="width:{{currentWdith + 'rpx'}}">
+        <view class="audio-circle"></view>
+      </view>
+    </view>
+    <text>{{''+ duration}}</text>
+  </view>
+
+  <view class="footerContainer">
+    <text class="iconfont {{mode==1?'icon-iconsMusicyemianbofangmoshiRepeat':mode==2?'icon-iconsMusicyemianbofangmoshiShuffle ':'icon-iconsMusicyemianbofangmoshiAlrepeatOne'}}" bindtap="switchModel"></text>
+    <text class="iconfont icon-shangyishou" data-type="pre" bindtap="handleSwitch"></text>
+    <text class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}} big" bindtap="musicPlay"></text>
+    <text class="iconfont icon-next" data-type="next" bindtap="handleSwitch"></text>
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+  </view>
+</view>

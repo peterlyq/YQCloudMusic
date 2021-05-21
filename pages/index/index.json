@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "navHeader":"/component/navHeader/navHeader"
-  }
+  },
+  "navigationBarTitleText": "主页"
 }

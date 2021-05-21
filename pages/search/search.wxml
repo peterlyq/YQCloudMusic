@@ -1,0 +1,34 @@
+<!--pages/search/search.wxml-->
+<view class="searchContainer">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="headerInput">
+    <text class="iconfont icon-search"></text>
+      <input type="text" placeholder="搜索内容" placeholder-class="placeholder"/>
+    </view>
+    <text class="cancel">取消</text>
+  </view>
+  <!-- 热搜榜 -->
+  <view class="hotContent">
+    <view class="title">热搜榜</view>
+    <view class="hotList">
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text class="song-name">偏爱</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text class="song-name">偏爱</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text class="song-name">偏爱</text>
+      </view>
+      <view class="hotItem">
+        <text class="order">1</text>
+        <text class="song-name">偏爱</text>
+      </view>
+    </view>
+  </view>
+
+</view>
