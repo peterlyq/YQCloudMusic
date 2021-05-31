@@ -1,0 +1,5 @@
+<!--pages/practice/practice.wxml-->
+<view>
+  <button bindtap="getUserProfile"> 获取头像昵称 </button>
+  <button bindtap="getOpenId"> 获取openID </button>
+</view>

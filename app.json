@@ -4,11 +4,10 @@
     "pages/personal/personal",
     "pages/video/video",
     "pages/login/login",
-    "pages/recommendSong/recommendSong",
-    "pages/songDetail/songDetail",
     "pages/search/search"
+    
   ],
-  "entryPagePath": "pages/search/search",
+  "entryPagePath": "pages/index/index",
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
     "navigationBarTitleText": "网抑云音乐",
@@ -43,5 +42,26 @@
   },
   "requiredBackgroundModes": [
     "audio"
-  ]
+  ],
+  "subpackages": [
+    {
+    "root": "practicePackage",
+    "pages":[
+      "pages/practice/practice"
+    ]
+  },{
+    "root":"songPackage",
+    "name": "song",
+    "pages":[
+      "pages/recommendSong/recommendSong",
+      "pages/songDetail/songDetail"
+    ]
+  }
+],
+"preloadRule": {
+  "pages/index/index":{
+    "network": "all",
+    "packages": ["song"]
+  }
+}
 }

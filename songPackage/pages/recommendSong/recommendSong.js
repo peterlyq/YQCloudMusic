@@ -1,5 +1,5 @@
 // pages/recommendSong/recommendSong.js
-import request from "../../utils/request"
+import request from "../../../utils/request"
 import Pubsub from "pubsub-js"
 Page({
 
@@ -136,7 +136,7 @@ Page({
     })
     // 小程序传参长度有限制，多得截取掉
     wx.navigateTo({
-      url: '/pages/songDetail/songDetail?songId='+song.id,
+      url: '/songPackage/pages/songDetail/songDetail?songId='+song.id,
     })
   }
 })

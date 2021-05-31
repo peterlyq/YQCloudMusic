@@ -4,31 +4,42 @@
   <view class="header">
     <view class="headerInput">
     <text class="iconfont icon-search"></text>
-      <input type="text" placeholder="搜索内容" placeholder-class="placeholder"/>
+      <input type="text" value="{{searchContent}}" placeholder="{{placeholder}}" placeholder-class="placeholder" bindinput="handleInput"/>
+      <text class="clear" bindtap="clearSearchContent" hidden="{{!searchContent}}">X</text>
     </view>
-    <text class="cancel">取消</text>
+    <text class="cancel" hidden="{{!searchContent}}" bindtap="clearSearchContent">取消</text>
   </view>
+  <block wx:if="{{showSearch}}">
+    <view class="searchContent">
+    <view class="searchText" >搜索内容：{{searchContent}}</view>
+    <view class="searchList">
+      <view class="searchItem" wx:for="{{songList}}" wx:key="id">
+        <text class="iconfont icon-search"></text>
+        <text class="content" >{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  </block>
   <!-- 热搜榜 -->
-  <view class="hotContent">
+  <block wx:else>
+    <view class="history" wx:if="{{historyList.length > 0}}">
+      <view class="title">历史:</view>
+      <view class="item" wx:for="{{historyList}}" wx:key="item" bindtap="searchOne" id="{{item}}">{{item}}</view>
+     
+      <text class="clear iconfont icon-shanchu" bindtap="clearHistoryList"></text>
+    </view>
+    <view class="hotContent" >
     <view class="title">热搜榜</view>
-    <view class="hotList">
-      <view class="hotItem">
-        <text class="order">1</text>
-        <text class="song-name">偏爱</text>
+    <view class="hotList" >
+      <view class="hotItem" wx:for="{{hotList}}" wx:key="searchWord">
+        <text class="order">{{index+1}}</text>
+        <text class="song-name">{{item.searchWord}}
+        </text>
+        <image class="iconUrl" wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}"></image>
       </view>
-      <view class="hotItem">
-        <text class="order">1</text>
-        <text class="song-name">偏爱</text>
-      </view>
-      <view class="hotItem">
-        <text class="order">1</text>
-        <text class="song-name">偏爱</text>
-      </view>
-      <view class="hotItem">
-        <text class="order">1</text>
-        <text class="song-name">偏爱</text>
-      </view>
+      
     </view>
   </view>
+  </block>
 
 </view>

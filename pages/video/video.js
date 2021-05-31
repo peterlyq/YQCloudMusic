@@ -160,5 +160,11 @@ Page({
     this.setData({
       videoList
     })
+  },
+  toSearchPage(){
+    wx.navigateTo({
+      url: '/pages/search/search'
+      
+    })
   }
 })

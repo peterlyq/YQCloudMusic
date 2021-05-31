@@ -38,7 +38,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.16.0",
+  "libVersion": "2.13.0",
   "appid": "wx7edbf6c03d9dc936",
   "projectname": "music163",
   "debugOptions": {

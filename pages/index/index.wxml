@@ -13,7 +13,7 @@
       <text>每日推荐</text>
     </view>
     <view class="navItem">
-      <text class="iconfont icon-icon-"></text>
+      <text class="iconfont icon-icon-" bindtap="toOtherPage"></text>
       <text>歌单</text>
     </view>
     <view class="navItem">

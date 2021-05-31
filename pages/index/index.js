@@ -63,7 +63,12 @@ Page({
   },
   routerToRecommend(event){
     wx.navigateTo({
-      url: '/pages/recommendSong/recommendSong',
+      url: '/songPackage/pages/recommendSong/recommendSong',
+    })
+  },
+  toOtherPage(){
+    wx.navigateTo({
+      url: '/practicePackage/pages/practice/practice',
     })
   },
   /**

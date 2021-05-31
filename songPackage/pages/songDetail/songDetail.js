@@ -1,5 +1,5 @@
 // pages/songDetail/songDetail.js
-import request from "../../utils/request"
+import request from "../../../utils/request"
 import Pubsub from "pubsub-js"
 import Moment from "moment"
 var appInstance = getApp()
